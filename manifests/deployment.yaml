@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-test
+  labels:
+    app: react-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-test
+  template:
+    metadata:
+      labels:
+        app: react-test
+    spec:
+      containers:
+      - name: react-test
+        image: elgbourisaad/react-test:latest1   # Use your DockerHub image here
+        ports:
+        - containerPort: 80
