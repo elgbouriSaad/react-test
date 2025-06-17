@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: react-test
-        image: elgbourisaad/react-test:latest1   # Use your DockerHub image here
+        image: elgbourisaad/react-test:latest1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
