@@ -17,5 +17,25 @@ spec:
       containers:
       - name: react-test
         image: elgbourisaad/react-test:latest1   # Use your DockerHub image here
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 20
