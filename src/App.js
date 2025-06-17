@@ -23,6 +23,7 @@ function App() {
     <div className="App" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       <h1>Type and Display</h1>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
+        <h1>Type and Display</h1>
         <input
           type="text"
           value={input}
